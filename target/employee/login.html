@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <!-- Login.css -->
+    <link rel="stylesheet" href="css/login.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+            <!-- Tabs Titles -->
+            <br>
+            <br>
+
+            <!-- Login Form -->
+            <h3 class="card-title">WELCOME!!</h3>
+            </br>
+            <div hidden="true" id="warning" class="alert alert-danger text-center" role="alert" text-align="centre">Invalid Username/Password</div>
+            <input type="text" id="emp_id" class="fadeIn second" name="emplyeeid" placeholder="EmployeeId">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Password">
+            </br>
+            </br>
+            <input type="submit" onclick="submit_form()" class="fadeIn fourth" value="Log In">
+<!--            &lt;!&ndash; Remind Passowrd &ndash;&gt;-->
+<!--            <div id="formFooter">-->
+<!--                <a class="underlineHover" href="#">Forgot Password?</a>-->
+<!--            </div>-->
+
+        </div>
+    </div>
+</body>
+<script>
+    function submit_form() {
+        $("#warning").attr("hidden",true);
+        var username = $("#emp_id").val();
+        var password = $("#password").val();
+        var data = {"emp_id" : username,"password":password};
+        data = JSON.stringify(data)
+        console.log(data);
+        $.ajax({
+            type: 'POST',
+            url: 'webapi/employee/check',
+            dataType: 'text',
+            contentType:"application/json",
+            data : data,
+            success : function(data){
+                console.log(JSON.stringify(data));
+                if (data == "1"){
+                    window.location.href = "webapi/employee/next";
+                }
+                else if(data == "-1"){
+                    $("#warning").text("Invalid Username/Password!!");
+                    $("#warning").attr("hidden",false);
+                }
+                else if (data == "0"){
+                    $("#warning").text("You are not from account department!!");
+                    $("#warning").attr("hidden",false);
+                }
+            },
+            error:function (err) {
+                console.log(err);
+            },
+        });
+    }
+</script>
+</html>
