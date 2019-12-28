@@ -1,4 +1,4 @@
-# Academic ERP
+# Employee
 
 ## Configuration File
 Update configurations in the following files:
