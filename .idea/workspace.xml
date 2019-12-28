@@ -6,53 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c168a731-d990-40d2-911d-e5a81882250b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/academic/erp/DAO/SalaryMasterDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/academic/erp/controller/SalaryMasterController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/academic/erp/services/SalaryMasterREST.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/academic/erp/utils/Update.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/choice.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/choice.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/successfultransaction.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/updatesalary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/947641b5-c844-466a-89ff-f0f6f7330c8a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/947641b5-c844-466a-89ff-f0f6f7330c8a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/academic/erp/DAO/EmployeeDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/academic/erp/DAO/EmployeeDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/academic/erp/VO/EmployeeVO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/academic/erp/VO/EmployeeVO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/academic/erp/controller/EmployeeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/academic/erp/controller/EmployeeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/academic/erp/services/SalaryDisbursementREST.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/academic/erp/services/SalaryDisbursementREST.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/Employee.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/DAO/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/DAO/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/DAO/SalaryDisbursementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/DAO/SalaryDisbursementDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/VO/EmployeeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/VO/EmployeeVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/controller/SalaryDisbursementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/controller/SalaryDisbursementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/services/SalaryDisbursementREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/services/SalaryDisbursementREST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/academic/erp/utils/DBOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/academic/erp/utils/DBOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/META-INF/Employee.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/DAO/EmployeeDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/DAO/EmployeeDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/DAO/SalaryDisbursementDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/DAO/SalaryDisbursementDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/VO/EmployeeVO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/VO/EmployeeVO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/controller/EmployeeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/controller/EmployeeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/controller/SalaryDisbursementController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/controller/SalaryDisbursementController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/services/SalaryDisbursementREST.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/services/SalaryDisbursementREST.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/utils/DBOperations.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/academic/erp/utils/DBOperations.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/classes/hibernate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/classes/hibernate.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/employee/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/employee/view.html" afterDir="false" />
-    </list>
+    <list default="true" id="c168a731-d990-40d2-911d-e5a81882250b" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -353,8 +307,16 @@
       <workItem from="1575127889194" duration="2180000" />
       <workItem from="1575131497568" duration="2301000" />
       <workItem from="1577542531827" duration="1883000" />
-      <workItem from="1577544566650" duration="948000" />
+      <workItem from="1577544566650" duration="1226000" />
     </task>
+    <task id="LOCAL-00001" summary="final product">
+      <created>1577545727427</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577545727427</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -372,5 +334,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="final product" />
+    <option name="LAST_COMMIT_MESSAGE" value="final product" />
   </component>
 </project>
