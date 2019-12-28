@@ -14,7 +14,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "Employee")
-public class EmployeeVO {
+public class    EmployeeVO {
 
     @Id
     @Column
@@ -28,7 +28,15 @@ public class EmployeeVO {
     private String fname;
     private String lname;
     private String password;
+    private String phoneNo;
 
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
 
     public List<SalaryDisbursementVO> getSalaryDisbursementS() {
         return salaryDisbursementS;
@@ -118,11 +126,15 @@ public class EmployeeVO {
     @Override
     public String toString() {
         return "EmployeeVO{" +
-                "id=" + e_id +
+                "e_id=" + e_id +
                 ", emp_id='" + emp_id + '\'' +
                 ", fname='" + fname + '\'' +
                 ", lname='" + lname + '\'' +
                 ", password='" + password + '\'' +
+                ", phoneNo='" + phoneNo + '\'' +
+                ", salaryDisbursementS=" + salaryDisbursementS +
+                ", department=" + department +
+                ", salaryMaster=" + salaryMaster +
                 '}';
     }
 }

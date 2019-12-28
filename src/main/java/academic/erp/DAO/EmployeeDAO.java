@@ -20,7 +20,7 @@ public class EmployeeDAO {
 
     public List<Object> getEmployeesWithSalary(){
         dbOperations.openCurrentSessionWithTransaction();
-        Query<Object> query = dbOperations.getCurrentSession().createSQLQuery("select emp.e_id,CONCAT(emp.fname,' ',emp.lname) as name ,sm.salary,SUM(sd.salary_paid) as salary_paid,sm.salary-SUM(sd.salary_paid) as remaining from Employee as emp,SalaryMaster as sm, SalaryDisbursement as sd where sd.employee_e_id = emp.e_id and sm.employee_e_id = emp.e_id group by emp.e_id,sm.salary");
+        Query<Object> query = dbOperations.getCurrentSession().createSQLQuery("select emp.e_id,CONCAT(emp.fname,' ',emp.lname) as name ,sm.salary,SUM(sd.salary_paid) as salary_paid,sm.salary-SUM(sd.salary_paid) as remaining, emp.emp_id, emp.phoneNo from Employee as emp,SalaryMaster as sm, SalaryDisbursement as sd where sd.employee_e_id = emp.e_id and sm.employee_e_id = emp.e_id group by emp.e_id,sm.salary");
         List<Object> resultSet = query.getResultList();
         dbOperations.closeCurrentSessionWithTransaction();
         return resultSet;

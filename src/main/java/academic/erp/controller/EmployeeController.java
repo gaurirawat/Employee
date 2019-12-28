@@ -15,7 +15,7 @@ import java.util.List;
 
 @Path("/employee")
 public class EmployeeController {
-    private EmployeeREST employeeRest= new EmployeeREST();
+    private EmployeeREST employeeRest = new EmployeeREST();
 
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
@@ -29,8 +29,7 @@ public class EmployeeController {
         } else if (res == -1) {
 //            invalid id/password
             return Response.ok("-1").build();
-        }
-        else{
+        } else {
 //          user not from account
             return Response.ok("0").build();
         }
@@ -39,15 +38,29 @@ public class EmployeeController {
     @POST
     @Path("/view")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response viewAll(){
+    public Response viewAll() {
         return Response.ok().entity(employeeRest.getEmployees()).build();
+    }
+
+    @GET
+    @Path("/disburse")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response disburse() throws URISyntaxException {
+        return Response.seeOther(new URI("/employee/view.html")).build();
+    }
+
+    @GET
+    @Path("/update")
+    @Produces(MediaType.TEXT_PLAIN)
+    public Response update() throws URISyntaxException {
+        return Response.seeOther(new URI("/employee/updatesalary.html")).build();
     }
 
     @GET
     @Path("/next")
     @Produces(MediaType.TEXT_PLAIN)
     public Response next() throws URISyntaxException {
-        return Response.seeOther(new URI("/employee/view.html")).build();
+        return Response.seeOther(new URI("/employee/choice.html")).build();
     }
 
     @GET
@@ -56,62 +69,4 @@ public class EmployeeController {
         List<EmployeeVO> employeeVOS = employeeRest.findAll();
         return Response.ok().entity(employeeVOS).build();
     }
-
-//    @POST
-//    @Consumes(MediaType.MULTIPART_FORM_DATA)
-//    @Produces("text/plain")
-//    @Path("/check")
-//    public Response isAccountant(@FormParam("emp_id") String e_id,
-//                                 @FormParam("password") String pwd) throws URISyntaxException {
-//
-////        String e_id = "1";
-////        String pwd = "pwd";
-//        int res= employeeRest.isAccountDept(e_id, pwd);
-//        if(res==-1)
-//            return Response.seeOther(new URI("/Employee/login.html?invalid=1")).build();
-//        else if (res==0)
-//            return Response.seeOther(new URI("/academicerp/studentlist.html?invalid=2")).build();
-//        else
-//            return Response.seeOther(new URI("/academicerp/view.html")).build();
-
-//    }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

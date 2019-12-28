@@ -35,6 +35,7 @@
                 <th>Salary</th>
                 <th>Amount Paid</th>
                 <th>Remaining</th>
+                <th>Phone Number</th>
             </tr>
             </thead>
             <tbody>
@@ -46,6 +47,7 @@
                 <th>Salary</th>
                 <th>Amount Paid</th>
                 <th>Remaining</th>
+                <th>Phone Number</th>
             </tr>
             </tfoot>
         </table>
@@ -53,7 +55,7 @@
         <div class="row">
             <div class="col-lg-4 offset-lg-4">
                 <div class="input-group">
-                    <input type="text" id="amount_disburse" class="form-control" placeholder="Amount disburse...">
+                    <input type="text" id="amount_disburse" class="form-control" placeholder="Amount disburse">
                     <span class="input-group-btn">
                         <button onclick="disburse()" class="btn btn-primary" type="button">Disburse</button>
                     </span>
@@ -78,10 +80,11 @@
         var flag = false;
         $.each($("input[name='check_pay']:checked"), function(){
             // console.log($("#amount_disburse").val(),$("#remaining_"+$(this).val()).text());
-            if($("#remaining_"+$(this).val()).text() >= $("#amount_disburse").val()){
+            if(parseInt($("#remaining_"+$(this).val()).text()) >= parseInt($("#amount_disburse").val())){
                 valid_emp_ids.push($(this).val());
             }
             else {
+                console.log($("#remaining_"+$(this).val()).text() , $("#amount_disburse").val());
                 $("#warning").text("Invalid selection!!");
                 $("#warning").attr("hidden",false);
                 flag = true;
@@ -109,25 +112,11 @@
                 // }
             }
         });
-        alert("out");
-        window.location.reload(true);
+        // window.location.reload(true);
+        window.location.href = "/employee/successfultransaction.html";
     }
 
     $(document).ready(function() {
-    //     $('#example').DataTable();
-    //     $.ajax({
-    //         type: 'GET',
-    //         url: 'webapi/employee/view',
-    //         dataType: 'json',
-    //         success: function(data){
-    //         console.log(JSON.stringify(data));
-    //         // if(data.success) {
-    //         //     alert('Data recieved.');
-    //         // } else {
-    //         //     alert("Error");
-    //         // }
-    //     }
-    //     });
         function populate_table() {
 
             $('#example').DataTable({
@@ -184,7 +173,15 @@
                             return '<span id="remaining_' + row[0] + '">' + row[4] + '</span>';
                             // return '<a item-id="'+row[0]+'" href="javascript:void(0);" class="single_delete"><i class="fa fa-trash"></i></a>';
                         },
-                    }],
+                    },
+                    {
+                        'targets': 5,
+                        'visible': true,
+                        'render': function (data, type, row) {
+                            return '<span id="amount_paid_' + row[0] + '">' + row[6] + '</span>';
+                            // return '<a item-id="'+row[0]+'" href="javascript:void(0);" class="single_delete"><i class="fa fa-trash"></i></a>';
+                        },
+                    },],
             });
         }
         populate_table();
